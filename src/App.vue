@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="task">
     <h2>タスク一覧</h2>
     <ul>
       <li v-for="task in tasks" v-bind:key="task.id">
@@ -150,12 +150,36 @@ export default {
 </script>
 
 <style>
-#app {
+.task{
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  width: 60%;
+  margin: 0 auto;
+}
+
+h2 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #b8811c;
   margin-top: 60px;
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  font-size: 21px;
+  color: #2c3e50;
+}
+
+form {
+  padding-left: 40px;
+}
+
+form input{
+  width: 220px;
+  height: 22px;
+  font-size: 15px;
 }
 </style>
